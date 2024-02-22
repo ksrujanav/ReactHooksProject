@@ -1,21 +1,28 @@
-import { useState } from "react";
-
+import UseStateExample from "./Components/UseStateExample";
+import UseEffectExample from "./Components/UseEffectExample";
+import PropDrillingExample from "./Components/PropDrillingExample";
+import UseContextExample from "./Components/UseContextExample";
+import UseRefExample from "./Components/UseRefExample";
+import UseReducerExample from "./Components/UseReducerExample";
+import UseMemoExample from "./Components/UseMemoExample";
+import UseMemoExample1 from "./Components/UseMemoExample1";
+import UseCallbackExample from "./Components/UseCallbackExample";
+import UseFetchCustomHook from "./Components/UseFetchCustomHook";
+import UsingCustomHook from "./Components/UsingCustomHook";
 function App() {
-  let [counter, setCounter] = useState(0);
-  let incrementCounter = () => {
-    setCounter((counter) => counter + 1);
-  };
-  let decrementCounter = () => {
-    counter !== 0 && setCounter((counter) => counter - 1);
-  };
   return (
     <>
       <h1>React Hooks</h1>
-      <h3>Counter Value: {counter}</h3>
-      <button onClick={incrementCounter}>Increment Counter</button>
-      <br />
-      <br />
-      <button onClick={decrementCounter}>Decrement Counter</button>
+      <UseStateExample />
+      <UseEffectExample />
+      <PropDrillingExample />
+      <UseContextExample />
+      {/* <UseRefExample /> */}
+      <UseReducerExample />
+      {/* <UseMemoExample /> */}
+      <UseMemoExample1 />
+      <UseCallbackExample />
+      <UsingCustomHook />
     </>
   );
 }
